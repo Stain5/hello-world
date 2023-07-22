@@ -1,216 +1,223 @@
+
+:root {
+    font-size: 16px;
+    --text-color:#ed2191;
+    --background-color:#080808;
+    font-family: 'Rajdhani', sans-serif;
+}
 * {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    scroll-behavior: smooth;
 }
-
-
+a {
+    transition: 200ms ease;
+}
 
 body {
-    background-color:#121212;
+
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
-
-header {
-    background: rgb(184,50,50);
-    background: linear-gradient(90deg, rgba(184,50,50,1) 45%, rgba(226,59,59,1) 100%);
-    width: 100%;
-    position: fixed;
-    z-index: 999;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 200px;
+body::-webkit-scrollbar{
+    width: 0.25rem;
+}
+body::-webkit-scrollbar-track{
+background: white;
 }
 
-.hLogo {
-    text-decoration: none;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.8em;
-    color: #000000;
+body::-webkit-scrollbar-thumb{
+    background: var(--text-color);
+ }
+article {
+    margin-left: 7.2rem;
+    font-size: 2rem;
+    padding: 2rem;
+    text-align: center;
 }
 
-.navigation a {
-    text-decoration: none;
-    font-weight: 200;
-    text-transform: uppercase;
-    font-size: 1.1em;
-    padding-left: 20px;
-    color: #1F212E;
-    transition: 0.6s;
+main {
+    background-color: black;
 }
-
-.navigation a:hover{
-    color:red;
-}
-section {
-    padding: 100px 200px;
-}
-
-
-
-.main {
-
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-image: url("images/mask_totem_smoke_192795_1920x1080_00000.png");
-    background-size: cover;
+.mainSection {
+    background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.7), 
+      rgba(0, 0, 0, 0.7)
+    ),
+    url("images/pxfuel\ \(1\).jpg");    background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    
 
+    min-height: 50vh;
 
-}
+    font-weight: bolder;
 
-.main h2 {
-    color: #ffffff;
-    font-size: 1.4em;
-    font-weight: 500;
-    
-}
-
-.main h2 span {
-    display: inline-block;
-    margin-top: 10px;
-    color: red;
-    font-size: 3em;
-    font-weight: 600;
-}
-
-.main h3 {
-    color: #ffff;
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.mainbtn {
-    color: #1F212E;
-    text-decoration: none;
-    letter-spacing: 1px;
-    display: inline-block;
-    background-color: red;
-    font-size: 1.1em;
-    font-weight: 600;
-    padding: 0.9375em 2.1875em;
-    border-radius: 15px;
-    margin-bottom: 40px;
-    box-shadow: 1px 11px 30px black;
-    transition: 0.5s;
-}
-
-.mainbtn:hover {
-    background-color: #1F212E;
-    color: #E6E6E6;
-    transform: scale(1.1);
-}
-
-
-.title {
+    background-blend-mode: darken;
     display: flex;
-    text-transform: uppercase;
-    justify-content: center;
-    letter-spacing: 2px;
-    color: red;
-    font-size: 2.2em;
-    font-weight: 400;
-    margin-bottom: 30px;
+    flex-direction: column;
+}
+
+
+nav {
+    text-align: center;
+    padding-top: 2vh;
+    font-size: 1.5rem;
+
+    background-color: rgb(6, 6, 6);
+    position: fixed;
+    transition: 500ms ease;
 
 }
-section .cards {
-    background: url("/images/680398_00000.png");
-}
-.content {
+
+
+header nav ul {
     display: flex;
-    justify-content: center;
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+}
+
+
+header nav ul label{
+    font-size: 1.2rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 20px var(--text-color);
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-shadow: 2px 2px 20px var(--text-color);
+
+    display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    justify-content: center;
+    height: 5rem;
+    text-decoration: none;
+    font-weight: bolder;
+    transition: 500ms;
+}
+.navtext {
+    transition: 500ms ease;
+    display: none;
+    margin-left: 1rem;
 }
 
-.card {
-    background-color: red;
-    width: 21.25em;
-    box-shadow: 0 1px 30px rgba(255 1 1 / 20%);
-    border-radius: 10px;
-    padding: 25px;
-    margin: 15px;
-    transition: 0.5s;
+header nav ul label svg{
+color: var(--text-color);
 }
 
-.card:hover {
-    transform: scale(1.1);
+header nav ul li a svg {
+    min-width: 2rem;
+    margin: 0 1.5rem;
 }
 
-.icon {
-    color: black;
-    font-size: 8em;
-    text-align: center;
-}
-.info {
-    text-align: center;
-}
-.info h3 {
-    color: black;
-    font-size: 1.2em;
-    font-weight: 700;
-    margin: 15px;
-}
-@media (max-width:1023px){
-    header{
-        padding: 12px 20px;
-    }
 
-    .navigation a{
-        padding-left: 10px;
-    }
 
-    .title{
-        font-size: 1.8em;
+@media only screen and (min-width: 600px) {
+    nav ul label {
+        display: block;
     }
-
-    section{
-        padding: 80px 20px;
+    nav {
+        top:0;
+        width: 7.2rem;
+        height: 100vh;
     }
-
-    .main-content h2{
-        font-size: 1em;
-    }
-
-    .main-content h3{
-        font-size: 1.6em;
-    }
-
-    .content{
+    header nav ul {
         flex-direction: column;
-        align-items: center;
+    }
+    nav:hover {
+        width: 16rem;
+        
+    }
+    
+    nav:hover .navtext{
+    display: block;
+        
     }
 
+    header nav ul li {
+        width: 100%;
+        padding-top: 20vh;
+    
+    }
 }
 
-@media (max-width:641px){
-    body{
-        font-size: 12px;
-    }
+.terminal {
 
-    .main-content h2{
-        font-size: 0.8em;
-    }
+    font-size: 1rem;
+    text-align: center;
 
-    .main-content h3{
-        font-size: 1.4em;
-    }
+}
+.tHeader {
+
+    display: flex;
+    justify-content: center;
+    
+
+}
+.tHeader ul {
+    max-width: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 10px;
+
+    background-color: white;
 }
 
-@media (max-width:300px){
-    body{
-        font-size: 10px;
-     
+.tBody {
+    background-color: rgba(10, 10, 10, 0.8);
+    text-align: left;
+    width: 80%;
+    margin-left: 10%;
+
+}
+.tHeader ul li {
+    padding: 1vh;
+    width: 200vh;
+    text-align: center;
+    margin-right: 2vh;
+    color: black;
+    font-weight: bolder;
+
+}
+.bodycontent {
+    padding: 2vh;
+}
+@media only screen and (max-width: 600px) {
+
+    nav ul label {
+        display: none;
+    }
+
+    nav {
+        flex-direction: row;
+        bottom: 0;
+        width: 100vw;
+        height: 4rem;
+    }
+    header nav ul {
+        flex-direction: row;
+    }
+    header nav ul li {
+        width: 100%;
+    
+    }
+
+    header nav ul li {
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    article {
+        margin-left: 0;
+    }
+
+    .bodycontent {
+        padding: 5vh;
     }
 }
